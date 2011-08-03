@@ -1,0 +1,52 @@
+[user]
+	name = Joshua Kovach
+	email = kovach.jc@gmail.com
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 559x597+0+0
+	file-view-vpane-position = 533
+	history-view-vpane-position = 309
+	main-window-view = HistoryView
+[core]
+	editor = /home/joshua/Komodo-Edit-6/bin/komodo
+[alias]
+	co = checkout
+	b = branch -v --color
+	st = status
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	cam = commit -am
+	pullr = pull --rebase
+	unpushed = rev-list HEAD --pretty ^origin/master
+	dif = diff
+  cp = cherry-pick
+	ci = commit
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[merge]
+  tool = vim
+[mergetool "vim"]
+  cmd = vim -d -g $LOCAL $MERGED $REMOTE
+  keepbackup = false
+[repack]
+  usedeltabaseoffset = true
+[core]
+  editor = /usr/bin/vim
+  pager = "less -FRSX"
+  excludesfile = /home/joshua/.gitignore
+[push]
+	default = tracking
